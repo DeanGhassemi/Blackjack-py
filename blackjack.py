@@ -25,6 +25,11 @@ class Blackjack:
                      11,11,11]
         
     def draw_card(self, p: Player) -> None:
+        """Draws a card from the deck
+
+        Args:
+            p (Player): Player who calls the method
+        """
         card = random.choice(self.deck)
         p.hand.append(card)
         self.deck.remove(card)
